@@ -26,6 +26,12 @@ namespace dotnet_angular.Controllers
             });
         }
 
+        [HttpGet("[action]")]
+        public string ErrorRequest()
+        {
+            throw new Exception("Test Exception");
+        }
+
         public class WeatherForecast
         {
             public string DateFormatted { get; set; }
